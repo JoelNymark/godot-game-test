@@ -1,0 +1,130 @@
+[gd_scene load_steps=9 format=3 uid="uid://bwiqfirg5odmp"]
+
+[ext_resource type="PackedScene" uid="uid://bhxer415ifdin" path="res://scene/slot.tscn" id="1_2t1mu"]
+[ext_resource type="Script" path="res://scrip/inventory.gd" id="1_a8a4s"]
+[ext_resource type="Script" path="res://scrip/ui.gd" id="1_noflt"]
+[ext_resource type="Script" path="res://scrip/character.gd" id="2_apjdp"]
+[ext_resource type="PackedScene" uid="uid://cnb0ylievf26i" path="res://scene/passive_slot.tscn" id="2_tvqrs"]
+[ext_resource type="PackedScene" uid="uid://cj3yypa3khake" path="res://scene/player.tscn" id="5_pckie"]
+[ext_resource type="PackedScene" uid="uid://bfood1so3l1oe" path="res://scene/abstact_item.tscn" id="6_o0qvk"]
+[ext_resource type="PackedScene" uid="uid://cw6bqb2mfcigw" path="res://scene/active_slot.tscn" id="6_wisid"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_noflt")
+
+[node name="Inventory" type="GridContainer" parent="UI"]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 64.0
+offset_right = 1036.0
+offset_bottom = 264.0
+columns = 4
+script = ExtResource("1_a8a4s")
+
+[node name="slot" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="slot2" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="slot3" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="slot4" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="slot5" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="slot6" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="slot7" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="slot8" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="slot9" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="slot10" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="slot11" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="slot12" parent="UI/Inventory" instance=ExtResource("1_2t1mu")]
+layout_mode = 2
+
+[node name="Character" type="Control" parent="UI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_apjdp")
+
+[node name="PassiveSlot" parent="UI/Character" instance=ExtResource("2_tvqrs")]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 64.0
+offset_right = 704.0
+offset_bottom = 128.0
+slot_type = 1
+
+[node name="PassiveSlot2" parent="UI/Character" instance=ExtResource("2_tvqrs")]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 136.0
+offset_right = 704.0
+offset_bottom = 200.0
+slot_type = 2
+
+[node name="PassiveSlot3" parent="UI/Character" instance=ExtResource("2_tvqrs")]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 208.0
+offset_right = 704.0
+offset_bottom = 272.0
+slot_type = 3
+
+[node name="ActiveSlot" parent="UI/Character" instance=ExtResource("6_wisid")]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 136.0
+offset_right = 632.0
+offset_bottom = 200.0
+slot_type = 4
+
+[node name="ATK" type="Label" parent="UI"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="player" parent="." instance=ExtResource("5_pckie")]
+position = Vector2(440, 241)
+
+[node name="abstactItem" parent="." instance=ExtResource("6_o0qvk")]
+position = Vector2(778, 150)
+ID = "1"
+
+[node name="abstactItem2" parent="." instance=ExtResource("6_o0qvk")]
+position = Vector2(860, 385)
+ID = "2"
+
+[node name="abstactItem3" parent="." instance=ExtResource("6_o0qvk")]
+position = Vector2(681, 362)
+ID = "3"
+
+[node name="abstactItem4" parent="." instance=ExtResource("6_o0qvk")]
+position = Vector2(439, 98)
+ID = "4"
+
+[node name="abstactItem5" parent="." instance=ExtResource("6_o0qvk")]
+position = Vector2(108, 422)

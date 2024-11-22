@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwiqfirg5odmp"]
+
+[ext_resource type="PackedScene" uid="uid://cj3yypa3khake" path="res://scene/player.tscn" id="5_pckie"]
+[ext_resource type="PackedScene" uid="uid://bfood1so3l1oe" path="res://scene/abstact_item.tscn" id="6_o0qvk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("5_pckie")]
+unique_name_in_owner = true
+position = Vector2(744, 152)
+
+[node name="abstactItem" parent="." instance=ExtResource("6_o0qvk")]
+position = Vector2(778, 150)
+ID = "1"
+
+[node name="abstactItem2" parent="." instance=ExtResource("6_o0qvk")]
+position = Vector2(860, 385)
+ID = "2"
+
+[node name="abstactItem3" parent="." instance=ExtResource("6_o0qvk")]
+position = Vector2(681, 362)
+ID = "3"
+
+[node name="abstactItem4" parent="." instance=ExtResource("6_o0qvk")]
+position = Vector2(439, 98)
+ID = "4"
+
+[node name="abstactItem5" parent="." instance=ExtResource("6_o0qvk")]
+position = Vector2(108, 422)
